@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 2026 暑假極限大冒險：我們家的萌寵爆笑圖鑑 🐾</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Gaegu (手繪風) & Noto Sans TC -->
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        summer: {
+                            bg: '#FFF9F0',
+                            coral: '#FF6B6B',
+                            yellow: '#FFE66D',
+                            mint: '#4ECDC4',
+                            paper: '#FFFBF5',
+                            purple: '#845EC2',
+                            dark: '#2C3E50'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        doodle: ['Gaegu', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #FFF9F0;
+            background-image: radial-gradient(#FFD166 0.75px, transparent 0.75px), radial-gradient(#FFD166 0.75px, #FFF9F0 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+            color: #2C3E50;
+            overflow-x: hidden;
+        }
+
+        .font-doodle {
+            font-family: 'Gaegu', cursive;
+        }
+
+        /* 拍立得相框樣式 */
+        .polaroid {
+            background: white;
+            padding: 12px 12px 24px 12px;
+            box-shadow: 4px 10px 20px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.08);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid #2C3E50;
+        }
+        .polaroid:hover {
+            transform: scale(1.03) rotate(0deg) !important;
+            box-shadow: 6px 16px 28px rgba(0,0,0,0.18);
+            z-index: 20;
+        }
+
+        /* 膠帶與貼紙陰影 */
+        .washi-tape {
+            background-color: rgba(255, 230, 109, 0.7);
+            border: 1px dashed rgba(0,0,0,0.2);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        /* 動畫效果 */
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-3deg); }
+            50% { transform: rotate(3deg); }
+        }
+        .animate-wiggle {
+            animation: wiggle 2.5s ease-in-out infinite;
+        }
+
+        @keyframes float-badge {
+            0%, 100% { transform: translateY(0px) rotate(2deg); }
+            50% { transform: translateY(-8px) rotate(-2deg); }
+        }
+        .animate-float {
+            animation: float-badge 3s ease-in-out infinite;
+        }
+
+        /* 隱藏滾動條 */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="relative min-h-screen flex flex-col justify-between">
+
+    <!-- 頂部手繪感導覽列 -->
+    <header class="sticky top-0 z-40 bg-amber-100/90 backdrop-blur-md border-b-4 border-slate-800 px-4 py-3 shadow-md">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span class="text-3xl animate-bounce">🦊</span>
+                <span class="font-doodle text-2xl md:text-3xl font-bold tracking-wider text-slate-800">
+                    2026 宜蘭爆笑爆進戰記
+                </span>
+            </div>
+            
+            <div class="flex items-center gap-3">
+                <!-- 音效播放器 -->
+                <button id="bgmBtn" onclick="toggleBGM()" class="px-3 py-1.5 bg-yellow-300 hover:bg-yellow-400 border-2 border-slate-800 rounded-full font-bold text-xs md:text-sm flex items-center gap-1.5 shadow-[2px_2px_0px_#2C3E50] transition active:translate-y-0.5">
+                    <i id="bgmIcon" class="fa-solid fa-music text-slate-800"></i>
+                    <span id="bgmText">夏日BGM: OFF</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主內容容器 -->
+    <main class="max-w-5xl mx-auto px-4 py-6 w-full space-y-12">
+
+        <!-- ================= HERO 主視覺 ================= -->
+        <section class="relative bg-white border-4 border-slate-800 rounded-3xl p-6 md:p-10 shadow-[8px_8px_0px_#2C3E50] overflow-hidden">
+            <!-- 背景貼紙裝飾 -->
+            <div class="absolute -right-6 -top-6 text-7xl opacity-20 pointer-events-none rotate-12">🌴</div>
+            <div class="absolute -left-6 -bottom-6 text-7xl opacity-20 pointer-events-none -rotate-12">🦥</div>
+
+            <div class="relative z-10 text-center space-y-4">
+                <div class="inline-block bg-pink-200 border-2 border-slate-800 px-4 py-1 rounded-full text-xs md:text-sm font-black text-slate-800 transform -rotate-2 shadow-[2px_2px_0px_#2C3E50]">
+                    🔥 國中生涯最後一個不用寫暑假作業的暑假（才怪）
+                </div>
+
+                <h1 class="text-3xl md:text-5xl font-black text-slate-800 leading-tight">
+                    宜蘭狐狸村大冒險 🐾<br>
+                    <span class="text-2xl md:text-4xl text-rose-500 font-doodle font-bold tracking-wide">
+                        （全家人集體被動物逼到破防紀錄）
+                    </span>
+                </h1>
+
+                <p class="text-slate-600 text-sm md:text-base max-w-2xl mx-auto font-medium leading-relaxed">
+                    爸媽說週末要帶我們去宜蘭戶外吸吸收負離子、培養家庭親情...<br>
+                    結果一進去根本直接變<span class="bg-yellow-200 px-1 font-bold text-slate-800">「搶食生存大亂鬥」</span>！
+                    這不是精緻的網美之旅，這是我們家最崩壞、也最爆笑的幸福時刻！
+                </p>
+
+                <!-- 互動快速跳轉區 -->
+                <div class="pt-4 flex flex-wrap justify-center gap-3">
+                    <a href="#quest-log" class="px-5 py-2.5 bg-teal-400 hover:bg-teal-300 border-2 border-slate-800 rounded-xl font-bold text-sm text-slate-800 shadow-[3px_3px_0px_#2C3E50] transition hover:-translate-y-0.5">
+                        📖 翻開崩壞冒險日誌
+                    </a>
+                    <a href="#memes-section" class="px-5 py-2.5 bg-rose-400 hover:bg-rose-300 border-2 border-slate-800 rounded-xl font-bold text-sm text-slate-800 shadow-[3px_3px_0px_#2C3E50] transition hover:-translate-y-0.5">
+                        📸 爸媽梗圖切換器
+                    </a>
+                    <a href="#feeding-game" class="px-5 py-2.5 bg-yellow-300 hover:bg-yellow-200 border-2 border-slate-800 rounded-xl font-bold text-sm text-slate-800 shadow-[3px_3px_0px_#2C3E50] transition hover:-translate-y-0.5">
+                        🍖 線上餵食小遊戲
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= 冒險章節圖鑑 (QUEST LOG) ================= -->
+        <section id="quest-log" class="space-y-6">
+            <div class="flex items-center gap-3 border-b-4 border-slate-800 pb-2">
+                <span class="text-3xl">📜</span>
+                <h2 class="text-2xl md:text-3xl font-black text-slate-800">四大事態發散：冒險章節日誌</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- 章節 1: 狐狸村突擊戰 -->
+                <div class="bg-amber-50 border-3 border-slate-800 rounded-2xl p-5 shadow-[5px_5px_0px_#2C3E50] relative flex flex-col justify-between">
+                    <div class="washi-tape absolute -top-3 left-6 w-24 h-6 transform -rotate-3 z-10"></div>
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="px-2.5 py-1 bg-amber-200 border border-slate-800 text-xs font-bold rounded-lg">Chapter 1</span>
+                            <span class="text-xs font-doodle text-slate-500 font-bold">10:30 AM · 戰場第一線</span>
+                        </div>
+                        <h3 class="text-xl font-black text-slate-800 mb-2">🦊 狐狸村突擊戰：仙氣秒變搶食怪</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            進園前以為狐狸都跟動漫裡一樣優雅冷酷... 結果我剛拿出飼料包，周圍八隻狐狸直接用眼神鎖定我！有一隻還差點把我哥的夾腳拖當成肉乾咬走，根本是合法搶劫隊！
+                        </p>
+                    </div>
+                    <div class="bg-white p-3 rounded-xl border-2 border-slate-800 flex items-center justify-between text-xs font-bold text-slate-700">
+                        <span>💬 國中生註解：</span>
+                        <span class="text-rose-500">「這眼神比我們數學老師抓抽屜手機還犀利」</span>
+                    </div>
+                </div>
+
+                <!-- 章節 2: 樹懶慢動作 Feeding -->
+                <div class="bg-teal-50 border-3 border-slate-800 rounded-2xl p-5 shadow-[5px_5px_0px_#2C3E50] relative flex flex-col justify-between">
+                    <div class="washi-tape absolute -top-3 right-6 w-24 h-6 transform rotate-2 z-10"></div>
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="px-2.5 py-1 bg-teal-200 border border-slate-800 text-xs font-bold rounded-lg">Chapter 2</span>
+                            <span class="text-xs font-doodle text-slate-500 font-bold">11:45 AM · 極限考驗</span>
+                        </div>
+                        <h3 class="text-xl font-black text-slate-800 mb-2">🦥 樹懶慢動作：考驗人類耐心極限</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            我拿蘋果片餵樹懶，牠從抬頭到張嘴吃了整整三分鐘！我站在那邊手超酸，拿手機滑完兩則 IG Reel 牠連第一口都還沒咬完... 尊尊尊，這個生活步調我太佩服了。
+                        </p>
+                    </div>
+                    <div class="bg-white p-3 rounded-xl border-2 border-slate-800 flex items-center justify-between text-xs font-bold text-slate-700">
+                        <span>💬 國中生註解：</span>
+                        <span class="text-teal-600">「樹懶張嘴的速度比我早自習交作業還慢」</span>
+                    </div>
+                </div>
+
+                <!-- 章節 3: 爸爸表情包爆發 -->
+                <div class="bg-rose-50 border-3 border-slate-800 rounded-2xl p-5 shadow-[5px_5px_0px_#2C3E50] relative flex flex-col justify-between">
+                    <div class="washi-tape absolute -top-3 left-10 w-24 h-6 transform rotate-1 z-10"></div>
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="px-2.5 py-1 bg-rose-200 border border-slate-800 text-xs font-bold rounded-lg">Chapter 3</span>
+                            <span class="text-xs font-doodle text-slate-500 font-bold">01:15 PM · 梗圖誕生</span>
+                        </div>
+                        <h3 class="text-xl font-black text-slate-800 mb-2">🥸 爸爸表情包特輯：名場面產出</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            平時威嚴的爸爸被一隻好奇的水豚靠近腳邊，整個人嚇到縮成一團還硬要微笑！那個「既害怕又要保持微笑」的表情直接被我用 iPhone 零秒捕捉，馬上設為家庭群組貼圖！
+                        </p>
+                    </div>
+                    <div class="bg-white p-3 rounded-xl border-2 border-slate-800 flex items-center justify-between text-xs font-bold text-slate-700">
+                        <span>💬 國中生註解：</span>
+                        <span class="text-rose-500">「爸爸威嚴度：-9999 (已存檔鎖屏)」</span>
+                    </div>
+                </div>
+
+                <!-- 章節 4: 網美照 vs 廢照 -->
+                <div class="bg-purple-50 border-3 border-slate-800 rounded-2xl p-5 shadow-[5px_5px_0px_#2C3E50] relative flex flex-col justify-between">
+                    <div class="washi-tape absolute -top-3 right-10 w-24 h-6 transform -rotate-2 z-10"></div>
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="px-2.5 py-1 bg-purple-200 border border-slate-800 text-xs font-bold rounded-lg">Chapter 4</span>
+                            <span class="text-xs font-doodle text-slate-500 font-bold">03:30 PM · 冒險總結</span>
+                        </div>
+                        <h3 class="text-xl font-black text-slate-800 mb-2">📸 網美照算什麼？廢照才是真的！</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            媽媽原本想拍那種精緻文青風日系寫真，結果拍出來的照片全是大家被動物嚇到閉眼、頭髮被風吹爆的廢照片。但說真的，這種照片拿出來看大家笑得最開心！
+                        </p>
+                    </div>
+                    <div class="bg-white p-3 rounded-xl border-2 border-slate-800 flex items-center justify-between text-xs font-bold text-slate-700">
+                        <span>💬 國中生註解：</span>
+                        <span class="text-purple-600">「幸福就是大家一起拍廢照笑爆」</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= 獨家互動 1: 爸媽梗圖切換器 (MEMES GENERATOR) ================= -->
+        <section id="memes-section" class="bg-yellow-100 border-4 border-slate-800 rounded-3xl p-6 md:p-8 shadow-[8px_8px_0px_#2C3E50] space-y-6">
+            <div class="text-center space-y-2">
+                <span class="px-3 py-1 bg-white border-2 border-slate-800 rounded-full font-bold text-xs text-slate-800">🔥 互動專區</span>
+                <h2 class="text-2xl md:text-4xl font-black text-slate-800">📸 爸媽崩壞照 vs 網美濾鏡切換器</h2>
+                <p class="text-xs md:text-sm text-slate-600 font-medium">點擊按鈕，解鎖我爸媽在現場最真實的「內心戲與表情失控」！</p>
+            </div>
+
+            <!-- 拍立得展示面板 -->
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8 py-4">
+                
+                <!-- 拍立得 1 (爸爸) -->
+                <div class="polaroid w-72 rounded-sm transform -rotate-2 relative">
+                    <div class="washi-tape absolute -top-4 left-1/2 -translate-x-1/2 w-28 h-6 z-20"></div>
+                    <div class="relative bg-slate-200 h-64 rounded overflow-hidden border border-slate-800 flex items-center justify-center text-center p-4">
+                        <!-- 靜態模擬照 -->
+                        <div id="dadPhoto" class="w-full h-full flex flex-col items-center justify-center bg-amber-200 transition-all duration-300">
+                            <span id="dadEmoji" class="text-7xl mb-2 animate-bounce">🥸</span>
+                            <span id="dadTag" class="text-xs font-black px-2 py-1 bg-white rounded border border-slate-800">【預設模式】擺拍中的老爸</span>
+                        </div>
+                    </div>
+                    <div class="mt-3 text-center">
+                        <p id="dadCaption" class="font-doodle text-xl font-bold text-slate-800">「我很平靜，動物都很愛我。」</p>
+                        <span class="text-[10px] text-slate-400 font-bold block">點擊下方按鈕切換真實視角</span>
+                    </div>
+                </div>
+
+                <!-- 拍立得 2 (媽媽) -->
+                <div class="polaroid w-72 rounded-sm transform rotate-2 relative">
+                    <div class="washi-tape absolute -top-4 left-1/2 -translate-x-1/2 w-28 h-6 z-20"></div>
+                    <div class="relative bg-slate-200 h-64 rounded overflow-hidden border border-slate-800 flex items-center justify-center text-center p-4">
+                        <div id="momPhoto" class="w-full h-full flex flex-col items-center justify-center bg-pink-200 transition-all duration-300">
+                            <span id="momEmoji" class="text-7xl mb-2 animate-bounce">👩‍🦱</span>
+                            <span id="momTag" class="text-xs font-black px-2 py-1 bg-white rounded border border-slate-800">【網美模式】宜蘭貴婦媽媽</span>
+                        </div>
+                    </div>
+                    <div class="mt-3 text-center">
+                        <p id="momCaption" class="font-doodle text-xl font-bold text-slate-800">「來～幫媽媽拍一張有質感的！」</p>
+                        <span class="text-[10px] text-slate-400 font-bold block">點擊下方按鈕切換真實視角</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 控制切換按鈕 -->
+            <div class="flex justify-center gap-4 pt-2">
+                <button onclick="toggleMemeMode('beauty')" class="px-5 py-2.5 bg-white hover:bg-slate-50 border-2 border-slate-800 rounded-xl font-bold text-sm text-slate-800 shadow-[3px_3px_0px_#2C3E50] transition active:translate-y-0.5">
+                    ✨ 網美夢幻濾鏡 (假象)
+                </button>
+                <button onclick="toggleMemeMode('fail')" class="px-5 py-2.5 bg-rose-400 hover:bg-rose-300 border-2 border-slate-800 rounded-xl font-black text-sm text-slate-800 shadow-[3px_3px_0px_#2C3E50] transition active:translate-y-0.5 animate-pulse">
+                    💥 爆笑崩壞真實視角 (解鎖梗圖)
+                </button>
+            </div>
+        </section>
+
+
+        <!-- ================= 獨家互動 2: 餵食模擬器 (FEEDING GAME) ================= -->
+        <section id="feeding-game" class="bg-teal-100 border-4 border-slate-800 rounded-3xl p-6 md:p-8 shadow-[8px_8px_0px_#2C3E50] space-y-6">
+            <div class="text-center space-y-2">
+                <span class="px-3 py-1 bg-white border-2 border-slate-800 rounded-full font-bold text-xs text-slate-800">🎮 迷你小遊戲</span>
+                <h2 class="text-2xl md:text-4xl font-black text-slate-800">🐾 宜蘭萌寵線上餵食互動器</h2>
+                <p class="text-xs md:text-sm text-slate-600 font-medium">選一種食物投餵狐狸與樹懶，觀察牠們的超猛反應！</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center max-w-3xl mx-auto">
+                <!-- 寵物 1: 狐狸 -->
+                <div class="bg-white border-3 border-slate-800 rounded-2xl p-4 text-center space-y-3 shadow-[4px_4px_0px_#2C3E50]">
+                    <div id="foxPet" class="text-6xl my-2 transition-transform duration-200">🦊</div>
+                    <div class="font-black text-slate-800 text-lg">貪吃小狐狸</div>
+                    
+                    <!-- 飽足度能量條 -->
+                    <div class="w-full bg-slate-200 rounded-full h-4 border border-slate-800 p-0.5 overflow-hidden">
+                        <div id="foxEnergyBar" class="bg-amber-400 h-full rounded-full transition-all duration-300" style="width: 30%;"></div>
+                    </div>
+                    <div id="foxStatus" class="text-xs font-bold text-slate-500">狀態：肚子餓急需糧食！</div>
+
+                    <button onclick="feedPet('fox')" class="w-full py-2 bg-amber-400 hover:bg-amber-300 border-2 border-slate-800 rounded-xl font-bold text-xs text-slate-800 shadow-[2px_2px_0px_#2C3E50] transition active:translate-y-0.5">
+                        🍖 投餵高級肉乾
+                    </button>
+                </div>
+
+                <!-- 寵物 2: 樹懶 -->
+                <div class="bg-white border-3 border-slate-800 rounded-2xl p-4 text-center space-y-3 shadow-[4px_4px_0px_#2C3E50]">
+                    <div id="slothPet" class="text-6xl my-2 transition-transform duration-200">🦥</div>
+                    <div class="font-black text-slate-800 text-lg">慢速樹懶尊者</div>
+                    
+                    <!-- 飽足度能量條 -->
+                    <div class="w-full bg-slate-200 rounded-full h-4 border border-slate-800 p-0.5 overflow-hidden">
+                        <div id="slothEnergyBar" class="bg-teal-400 h-full rounded-full transition-all duration-300" style="width: 20%;"></div>
+                    </div>
+                    <div id="slothStatus" class="text-xs font-bold text-slate-500">狀態：咀嚼中... (預估需10分鐘)</div>
+
+                    <button onclick="feedPet('sloth')" class="w-full py-2 bg-teal-400 hover:bg-teal-300 border-2 border-slate-800 rounded-xl font-bold text-xs text-slate-800 shadow-[2px_2px_0px_#2C3E50] transition active:translate-y-0.5">
+                        🍎 投餵新鮮蘋果片
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= 家庭留言板 & 評分系統 ================= -->
+        <section class="bg-white border-4 border-slate-800 rounded-3xl p-6 md:p-8 shadow-[8px_8px_0px_#2C3E50] space-y-6">
+            <div class="flex justify-between items-center border-b-4 border-slate-800 pb-3">
+                <div>
+                    <h2 class="text-2xl font-black text-slate-800">💬 國中生挺到底留言板</h2>
+                    <p class="text-xs text-slate-500">留下你對我們家這趟爆爆冒險的看法！</p>
+                </div>
+                <span class="text-3xl">✍️</span>
+            </div>
+
+            <!-- 預設同學留言牆 -->
+            <div id="commentsContainer" class="space-y-3 max-h-60 overflow-y-auto pr-1">
+                <div class="p-3 bg-amber-50 border-2 border-slate-800 rounded-xl text-xs font-bold text-slate-700 flex justify-between items-center">
+                    <span>同學阿豪：<span class="font-normal">「你爸那個表情直接設為群組貼圖啦哈哈哈哈哈哈！」</span></span>
+                    <span class="text-[10px] bg-amber-200 px-2 py-0.5 rounded border border-slate-800">🔥 +100</span>
+                </div>
+                <div class="p-3 bg-teal-50 border-2 border-slate-800 rounded-xl text-xs font-bold text-slate-700 flex justify-between items-center">
+                    <span>隔壁桌小美：<span class="font-normal">「樹懶那段太真實，我們上次去也是等到腳麻！」</span></span>
+                    <span class="text-[10px] bg-teal-200 px-2 py-0.5 rounded border border-slate-800">❤️ 真的</span>
+                </div>
+            </div>
+
+            <!-- 輸入新留言表單 -->
+            <form onsubmit="postComment(event)" class="flex gap-2">
+                <input type="text" id="commentInput" placeholder="寫點什麼... (例如：求爸爸梗圖高清無碼原圖)" required
+                    class="flex-1 px-4 py-2.5 bg-slate-50 border-2 border-slate-800 rounded-xl text-xs font-bold text-slate-800 focus:outline-none focus:bg-white transition">
+                <button type="submit" class="px-5 py-2.5 bg-yellow-300 hover:bg-yellow-400 border-2 border-slate-800 rounded-xl font-black text-xs text-slate-800 shadow-[2px_2px_0px_#2C3E50] transition active:translate-y-0.5">
+                    發送 🚀
+                </button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- 頁尾宣告 -->
+    <footer class="bg-slate-800 text-white border-t-4 border-slate-900 py-6 text-center text-xs space-y-2 mt-12">
+        <p class="font-doodle text-lg font-bold text-yellow-300">🐾 2026 暑假宜蘭狐狸村冒險日誌 · 國中生原創紀錄</p>
+        <p class="text-slate-400">本網頁為純屬娛樂之手繪風互動單頁應用程式（SPA）</p>
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT 互動邏輯 ================= -->
+    <script>
+        /* 1. Web Audio API 夏日輕鬆音效生成器 (無需外部 MP3 檔) */
+        let audioCtx = null;
+        let isBgmPlaying = false;
+        let bgmTimer = null;
+
+        function initAudio() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+        }
+
+        function playTone(freq, duration = 0.1, type = 'sine') {
+            initAudio();
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.type = type;
+            osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+            gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+            
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            osc.start();
+            osc.stop(audioCtx.currentTime + duration);
+        }
+
+        function toggleBGM() {
+            isBgmPlaying = !isBgmPlaying;
+            const btnText = document.getElementById('bgmText');
+            const btnIcon = document.getElementById('bgmIcon');
+
+            if (isBgmPlaying) {
+                btnText.innerText = "夏日BGM: ON 🎵";
+                btnIcon.className = "fa-solid fa-volume-high text-slate-800 animate-spin";
+                
+                // 簡易夏日旋律迴圈
+                const notes = [261.63, 329.63, 392.00, 523.25, 440.00, 392.00, 329.63];
+                let noteIdx = 0;
+                bgmTimer = setInterval(() => {
+                    playTone(notes[noteIdx], 0.2, 'triangle');
+                    noteIdx = (noteIdx + 1) % notes.length;
+                }, 350);
+            } else {
+                btnText.innerText = "夏日BGM: OFF";
+                btnIcon.className = "fa-solid fa-music text-slate-800";
+                if (bgmTimer) clearInterval(bgmTimer);
+            }
+        }
+
+
+        /* 2. 爸媽梗圖切換邏輯 */
+        function toggleMemeMode(mode) {
+            playTone(600, 0.1, 'sine');
+
+            const dadEmoji = document.getElementById('dadEmoji');
+            const dadTag = document.getElementById('dadTag');
+            const dadCaption = document.getElementById('dadCaption');
+            const dadPhoto = document.getElementById('dadPhoto');
+
+            const momEmoji = document.getElementById('momEmoji');
+            const momTag = document.getElementById('momTag');
+            const momCaption = document.getElementById('momCaption');
+            const momPhoto = document.getElementById('momPhoto');
+
+            if (mode === 'fail') {
+                // 崩壞真實視角
+                dadEmoji.innerText = "😱";
+                dadTag.innerText = "【極限崩壞】被水豚突襲的老爸";
+                dadCaption.innerText = "「鵝啊啊！牠是不是要咬我鞋子！救命！」";
+                dadPhoto.className = "w-full h-full flex flex-col items-center justify-center bg-rose-300 animate-bounce";
+
+                momEmoji.innerText = "🌪️";
+                momTag.innerText = "【風速發散】頭髮被狂風吹爆的媽媽";
+                momCaption.innerText = "「等一下！不要現在拍！我頭髮亂了啦！」";
+                momPhoto.className = "w-full h-full flex flex-col items-center justify-center bg-purple-300 animate-pulse";
+            } else {
+                // 網美濾鏡假象
+                dadEmoji.innerText = "🥸";
+                dadTag.innerText = "【預設模式】擺拍中的老爸";
+                dadCaption.innerText = "「我很平靜，動物都很愛我。」";
+                dadPhoto.className = "w-full h-full flex flex-col items-center justify-center bg-amber-200";
+
+                momEmoji.innerText = "👩‍🦱";
+                momTag.innerText = "【網美模式】宜蘭貴婦媽媽";
+                momCaption.innerText = "「來～幫媽媽拍一張有質感的！」";
+                momPhoto.className = "w-full h-full flex flex-col items-center justify-center bg-pink-200";
+            }
+        }
+
+
+        /* 3. 寵物餵食遊戲邏輯 */
+        let foxEnergy = 30;
+        let slothEnergy = 20;
+
+        function feedPet(type) {
+            playTone(800, 0.15, 'square');
+
+            if (type === 'fox') {
+                foxEnergy = Math.min(100, foxEnergy + 25);
+                document.getElementById('foxEnergyBar').style.width = foxEnergy + '%';
+                
+                const pet = document.getElementById('foxPet');
+                const status = document.getElementById('foxStatus');
+                pet.style.transform = "scale(1.3) rotate(15deg)";
+                setTimeout(() => pet.style.transform = "scale(1) rotate(0deg)", 200);
+
+                if (foxEnergy >= 100) {
+                    status.innerText = "狀態：已吃飽！高興到在地上打滾！✨";
+                    status.className = "text-xs font-bold text-amber-600";
+                } else {
+                    status.innerText = "狀態：好吃！還想要更多肉乾！🔥";
+                }
+            } 
+            else if (type === 'sloth') {
+                slothEnergy = Math.min(100, slothEnergy + 20);
+                document.getElementById('slothEnergyBar').style.width = slothEnergy + '%';
+
+                const pet = document.getElementById('slothPet');
+                const status = document.getElementById('slothStatus');
+                
+                // 樹懶慢動作動畫
+                pet.style.transform = "translateY(-5px)";
+                setTimeout(() => pet.style.transform = "translateY(0px)", 500);
+
+                if (slothEnergy >= 100) {
+                    status.innerText = "狀態：滿載！準備進入為期3天的睡眠模式 💤";
+                    status.className = "text-xs font-bold text-teal-600";
+                } else {
+                    status.innerText = "狀態：咀嚼中...(極慢)...味道不錯~";
+                }
+            }
+        }
+
+
+        /* 4. 發送留言邏輯 */
+        function postComment(e) {
+            e.preventDefault();
+            playTone(500, 0.1, 'sine');
+
+            const input = document.getElementById('commentInput');
+            const text = input.value.trim();
+            if (!text) return;
+
+            const container = document.getElementById('commentsContainer');
+            const div = document.createElement('div');
+            div.className = "p-3 bg-yellow-50 border-2 border-slate-800 rounded-xl text-xs font-bold text-slate-700 flex justify-between items-center animate-fade-in";
+            div.innerHTML = `
+                <span>熱情網友：<span class="font-normal">「${text}」</span></span>
+                <span class="text-[10px] bg-yellow-200 px-2 py-0.5 rounded border border-slate-800">🔥 最新發布</span>
+            `;
+
+            container.prepend(div);
+            input.value = '';
+        }
+    </script>
+</body>
+</html>
